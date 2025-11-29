@@ -1,0 +1,725 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Осава Кенсуке</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2b624973-c6e1-8063-876b-ce70958eb67c" class="page sans"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://www.notion.so/icons/tulip_gray.svg"/></div><h1 class="page-title">Осава Кенсуке</h1><p class="page-description"></p></header><div class="page-body"><hr id="2b824973-c6e1-80d9-a5e2-e782279f9710"/><div id="2b624973-c6e1-81b7-b1ea-d5b62ffe550d" class="column-list"><div id="2b624973-c6e1-8155-9a52-f246e0b07ea7" style="width:37.5%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="2b624973-c6e1-81d9-b5be-d6000c1e3e68"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/ringed-planet_gray.svg"/></div><div style="width:100%"><nav id="2b624973-c6e1-8165-9e92-f7e8dd0d7c41" class="table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b824973-c6e1-80e9-be4c-cc510c54c03c"><mark class="highlight-default_background">✈︎ Осава Кенсуке</mark></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b724973-c6e1-8074-9be8-d3f2bc89b554"><mark class="highlight-default_background">✈︎ </mark>Профиль :</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b724973-c6e1-8043-83e2-d0bd3a80ccd0">Нарисуй автопортрет!</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b724973-c6e1-80d5-a143-d50c3c3d0e8b">Расскажи о себе!</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b724973-c6e1-8067-9c21-e14ec96c3dd0">Расскажи о своих предпочтениях!</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b724973-c6e1-805c-ba27-de1dc3a3448c">Вопрос-ответ</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b624973-c6e1-81e9-ae06-d2beab98fd6f"><mark class="highlight-default_background">✈︎ </mark>18 вопросов :</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b624973-c6e1-8127-a3c5-d1e49412f27f"><mark class="highlight-default_background">✈︎ </mark>Лор :</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b624973-c6e1-81f5-b7b8-caec86bfafc3">Общее</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b624973-c6e1-81b4-b729-f304a0353b02"><mark class="highlight-default_background">✈︎ </mark>Взаимоотношения :</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b624973-c6e1-81eb-a689-c7c016f36a53"><mark class="highlight-default_background">✈︎ </mark>Арты :</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b724973-c6e1-80fd-bdf9-fb23caf38e37">+ <mark class="highlight-blue">Хинами</mark></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b624973-c6e1-81b0-a661-f8c78eb06ed9">Разное</a></div></nav></div></figure></div><div id="2b624973-c6e1-8108-a353-eee6955e44ad" style="width:62.5%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="2b824973-c6e1-80e6-9b75-f53af1673b6e"><div style="width:100%"><h2 id="2b824973-c6e1-80e9-be4c-cc510c54c03c" class="block-color-teal_background"><mark class="highlight-default_background">✈︎ Осава Кенсуке</mark></h2><figure id="2b824973-c6e1-8040-8fc1-dfbcf32882fe" class="image"><a href="%D0%9E%D1%81%D0%B0%D0%B2%D0%B0%20%D0%9A%D0%B5%D0%BD%D1%81%D1%83%D0%BA%D0%B5/photo_2025-11-27_19-49-17.jpg"><img style="width:625.984375px" src="%D0%9E%D1%81%D0%B0%D0%B2%D0%B0%20%D0%9A%D0%B5%D0%BD%D1%81%D1%83%D0%BA%D0%B5/photo_2025-11-27_19-49-17.jpg"/></a></figure><figure id="2b624973-c6e1-81b7-a6d4-f30eb1be5773" class="image"><a href="%D0%9E%D1%81%D0%B0%D0%B2%D0%B0%20%D0%9A%D0%B5%D0%BD%D1%81%D1%83%D0%BA%D0%B5/IMG_4038.jpeg"><img style="width:709.96875px" src="%D0%9E%D1%81%D0%B0%D0%B2%D0%B0%20%D0%9A%D0%B5%D0%BD%D1%81%D1%83%D0%BA%D0%B5/IMG_4038.jpeg"/></a></figure><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="2b824973-c6e1-806f-b8d0-d1bee969cf8c"><div style="width:100%"><p id="2b824973-c6e1-801f-8d91-ef39468bc83e" class=""><strong>Возраст:</strong> 22 года</p><p id="2b824973-c6e1-80a1-bac8-c57a3d8a1714" class=""><strong>День рождения:</strong> 24 июля</p><p id="2b824973-c6e1-80cf-bed7-cda6ccf32d75" class=""><strong>Рост:</strong> 177 см</p><p id="2b824973-c6e1-80d7-9a17-ed3078685a8a" class=""><strong>Сосед(и) по комнате:</strong> Солари Лука и Цуруми Хинами</p></div></figure></div></figure></div></div><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="2b724973-c6e1-8017-bcf4-f525793be497"><div style="width:100%"><h2 id="2b724973-c6e1-8074-9be8-d3f2bc89b554" class=""><mark class="highlight-default_background">✈︎ </mark>Профиль :</h2><div id="2b724973-c6e1-800e-8eb3-f2ebaa2116ca" class="column-list"><div id="2b724973-c6e1-801e-bad5-ffc845230a1f" style="width:50%" class="column"><p id="2b724973-c6e1-8090-b498-c53a79a51ccf" class="">Меня зовут <em><mark class="highlight-teal">Осава Кенсуке</mark></em>.  Можете звать меня <em><mark class="highlight-teal">как вам угодно</mark></em><em><mark class="highlight-default">.</mark></em></p><p id="2b724973-c6e1-808a-9717-f92a5a2a63a6" class="">Мой день рождения – <em><mark class="highlight-teal">24 июля</mark></em>. По знаку зодиака я <em><mark class="highlight-teal">Лев</mark></em>. Моя группа крови – <em><mark class="highlight-teal">АВ</mark></em>.</p><p id="2b724973-c6e1-806c-963d-dbe09923cff9" class="">Я <em><mark class="highlight-teal">наверно, милый</mark></em> человек, мое хобби – <em><mark class="highlight-teal">музыка и коллекционирование</mark></em>, а особое умение – <em><mark class="highlight-teal">быть приятным собеседником (шучу)</mark></em>.</p><p id="2b724973-c6e1-8051-acda-d27da04250d6" class="">Мой девиз – <em><mark class="highlight-teal">I’m not here to fuck spiders</mark></em><mark class="highlight-default">!</mark><em><mark class="highlight-teal"> Прикольно, да? </mark></em>В свободное время я <em><mark class="highlight-teal">путешествую!</mark></em></p><p id="2b724973-c6e1-8059-928a-d77d43ec5488" class="">
+</p></div><div id="2b724973-c6e1-80e1-99ae-fb090bf12c4b" style="width:50%" class="column"><h3 id="2b724973-c6e1-8043-83e2-d0bd3a80ccd0" class="">Нарисуй автопортрет!</h3><figure id="2b724973-c6e1-80fd-80f9-f09ba22f0c26" class="image"><a href="%D0%9E%D1%81%D0%B0%D0%B2%D0%B0%20%D0%9A%D0%B5%D0%BD%D1%81%D1%83%D0%BA%D0%B5/%D0%BA%D0%B5%D0%BD%D1%81%D1%83%D0%BA%D0%B5.jpg"><img style="width:240px" src="%D0%9E%D1%81%D0%B0%D0%B2%D0%B0%20%D0%9A%D0%B5%D0%BD%D1%81%D1%83%D0%BA%D0%B5/%D0%BA%D0%B5%D0%BD%D1%81%D1%83%D0%BA%D0%B5.jpg"/></a></figure><p id="2b724973-c6e1-8061-975e-d3c0c653a3b6" class="">Мой шарм заключается в <em><mark class="highlight-teal">моем суперском характере</mark></em>♪</p><p id="2b724973-c6e1-80a0-934a-cb2db0095163" class="">
+</p></div></div><h3 id="2b724973-c6e1-80d5-a143-d50c3c3d0e8b" class="">Расскажи о себе!</h3><blockquote id="2b724973-c6e1-80be-9be2-fb388b4cd8e8" class="block-color-teal_background">Место рождения</blockquote><p id="2b724973-c6e1-804b-a10e-c27212112024" class="">Это уже неважно</p><blockquote id="2b724973-c6e1-8029-8063-f590d9e18d7b" class="block-color-teal_background">Рост</blockquote><p id="2b724973-c6e1-805e-904b-e25f7ae0ae99" class="">177 см</p><blockquote id="2b724973-c6e1-8010-9c3e-f3e01556ec1d" class="block-color-teal_background">Вес</blockquote><p id="2b724973-c6e1-808c-bd72-f19becd281c0" class="">59 кг</p><blockquote id="2b724973-c6e1-80e4-bc65-c606d0f7f53a" class="block-color-teal_background">Семья</blockquote><p id="2b724973-c6e1-803e-9539-c08a50c52cd5" class="">Отец, мать, младший брат</p><blockquote id="2b724973-c6e1-80d7-b899-d0e3ce8150f1" class="block-color-teal_background">Зрение</blockquote><p id="2b724973-c6e1-80ca-94fa-ea333781523c" class="">? — ?</p><blockquote id="2b724973-c6e1-8011-a994-e49d3d24502e" class="block-color-teal_background">Преобладающая рука</blockquote><p id="2b724973-c6e1-805a-8a74-c7ea92ca8429" class="">Левая / <span style="border-bottom:0.05em solid">Правая</span></p><h3 id="2b724973-c6e1-8067-9c21-e14ec96c3dd0" class="">Расскажи о своих предпочтениях!</h3><blockquote id="2b724973-c6e1-805f-8644-c970c0b98415" class="block-color-teal_background">Любимая еда</blockquote><p id="2b724973-c6e1-80b3-bc95-d97d7271dff2" class="">Кацу карри, попкорн</p><blockquote id="2b724973-c6e1-803e-a01f-d76cf759c7c8" class="block-color-teal_background">Нелюбимая еда</blockquote><p id="2b724973-c6e1-806e-a408-fdd456e6c226" class="">Кимчи (но я пытаюсь его полюбить)</p><blockquote id="2b724973-c6e1-8050-b6f4-ceaa7d5d6a97" class="block-color-teal_background">Любимый цвет</blockquote><p id="2b724973-c6e1-8089-8d00-da4783468e4b" class="">Синий</p><blockquote id="2b724973-c6e1-80ec-97f0-f58e40d43c91" class="block-color-teal_background">Любимый вид спорта</blockquote><p id="2b724973-c6e1-809e-bce8-e90de5f7c664" class="">Хайкинг считается?</p><blockquote id="2b724973-c6e1-806d-b7a7-eeddab42d8da" class="block-color-teal_background">Любимый музыкальный жанр</blockquote><p id="2b724973-c6e1-80c0-b09d-dd21de2d506c" class="">Любая музыка – моя любимая музыка</p><blockquote id="2b724973-c6e1-8094-a8f3-c89004c1a93c" class="block-color-teal_background">Любимый напиток</blockquote><p id="2b724973-c6e1-80a4-8755-f58d3d2d5554" class="">Мелон сода, любой чай</p><blockquote id="2b724973-c6e1-8066-a2d7-e07f59e16528" class="block-color-teal_background">Любимый бренд</blockquote><p id="2b724973-c6e1-80ec-8f2f-e65ba46eb04d" class="">Мне всё равно на такие вещи</p><blockquote id="2b724973-c6e1-8072-89cc-da5bf8d0d21f" class="block-color-teal_background">Любимое место</blockquote><p id="2b724973-c6e1-80d7-a5b1-f41b6d0b2590" class="">Любое место мое любимое, если компания хорошая</p><blockquote id="2b724973-c6e1-806b-84fd-c411b59d05f1" class="block-color-teal_background">Любимая погода</blockquote><p id="2b724973-c6e1-8082-9df1-f470a7d22704" class="">Солнечный летний или солнечный зимний день</p><blockquote id="2b724973-c6e1-8059-82ae-f73df5d72c90" class="block-color-teal_background">Любимое время года</blockquote><p id="2b724973-c6e1-8056-b43b-fe90275cb8b9" class="">Лето</p><blockquote id="2b724973-c6e1-807e-b25d-e3fb2b510c3d" class="block-color-teal_background">Любимая книга/манга</blockquote><p id="2b724973-c6e1-80cb-9649-d010fe22a65a" class="">Хантер х Хантер</p><blockquote id="2b724973-c6e1-8091-b2f3-cc44f0aa5174" class="block-color-teal_background">Любимый школьный предмет</blockquote><p id="2b724973-c6e1-8098-bc25-e42366bc3e59" class="">Литература</p><blockquote id="2b724973-c6e1-804e-a6a5-d9e547f0bf09" class="block-color-teal_background">Любимые эмодзи</blockquote><p id="2b724973-c6e1-8016-8a51-cc35322cbef9" class="">❤️‍🩹 🪻 🪸</p><blockquote id="2b724973-c6e1-80a4-8b88-cc5b9796be05" class="block-color-teal_background">Любимый аромат</blockquote><p id="2b724973-c6e1-80e2-b9fc-f39bb71ba660" class="">Петрикор, персик</p><blockquote id="2b724973-c6e1-8098-8601-c46a36a3cd37" class="block-color-teal_background">Любимый цветок</blockquote><p id="2b724973-c6e1-80fd-88c4-d3e950acb90f" class="">Незабудки, барвинок</p><h3 id="2b724973-c6e1-805c-ba27-de1dc3a3448c" class="">Вопрос-ответ</h3><blockquote id="2b724973-c6e1-8033-a135-e7bdb933221c" class="block-color-teal_background">Какой подарок обрадует?</blockquote><p id="2b724973-c6e1-808f-843d-cc73cf510c45" class="">Любой! Но музыкальным вещам я всегда рад</p><blockquote id="2b724973-c6e1-8098-b820-d961ef9e21f8" class="block-color-teal_background">Кем мечтал(а) стать в детстве?</blockquote><p id="2b724973-c6e1-808d-a42d-e764bdfebeba" class="">Хмм… Актером? Я никогда особо не мечтал</p><blockquote id="2b724973-c6e1-80e0-a3cd-e6558e0abb48" class="block-color-teal_background">Ты выиграл(а) 300 млн в лотерею! На что потратишь..?</blockquote><p id="2b724973-c6e1-8072-a7e9-db01e50e3523" class="">Отправился бы в путешествие!</p><blockquote id="2b724973-c6e1-8050-b8c1-fe9d0dce0437" class="block-color-teal_background">Каков твой идеал человека?</blockquote><p id="2b724973-c6e1-80b8-86b6-e70e40402d8f" class="">Любящий</p></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="2b624973-c6e1-8105-bf90-ef4a92b275ce"><div style="width:100%"><h2 id="2b624973-c6e1-81e9-ae06-d2beab98fd6f" class=""><mark class="highlight-default_background">✈︎ </mark>18 вопросов :</h2><blockquote id="2b624973-c6e1-8177-a862-d7fec2d653fd" class="block-color-teal_background"><strong>— Как тебя зовут?</strong></blockquote><p id="2b624973-c6e1-81c7-a68b-faa576b9bfa5" class="">
+</p><blockquote id="2b624973-c6e1-8161-98ad-f46cf7732916" class="block-color-teal_background"><strong>— Сколько тебе лет?</strong></blockquote><p id="2b624973-c6e1-8192-8faf-c26552afa397" class="">
+</p><blockquote id="2b624973-c6e1-8192-ad0c-dfaecb1b1f03" class="block-color-teal_background"><strong>— Твой род деятельности?</strong></blockquote><p id="2b624973-c6e1-8170-b9f0-dba20f4bf293" class="">
+</p><blockquote id="2b624973-c6e1-8122-8b13-e60bc792a273" class="block-color-teal_background"><strong>— Что ты делаешь в первую очередь, когда просыпаешься?</strong></blockquote><p id="2b624973-c6e1-8128-9529-ce895bb629f0" class="">
+</p><blockquote id="2b624973-c6e1-81ed-97ab-d034edb2f08a" class="block-color-teal_background"><strong>— Есть ли у тебя какие-нибудь привычки, связанные с едой?</strong></blockquote><p id="2b624973-c6e1-8109-8a54-dfb8f89a692e" class="">
+</p><blockquote id="2b624973-c6e1-8106-97cc-edb6ee68936a" class="block-color-teal_background"><strong>— С чем у тебя ассоциируется вечер?</strong></blockquote><p id="2b624973-c6e1-81c5-a7ef-eb537893314c" class="">
+</p><blockquote id="2b624973-c6e1-813d-a867-c100ad7daaff" class="block-color-teal_background"><strong>— Чем ты занимаешься перед сном?</strong></blockquote><p id="2b624973-c6e1-81bd-8531-d9112f06dc58" class="">
+</p><blockquote id="2b624973-c6e1-8147-85de-dde5dfa2db7d" class="block-color-teal_background"><strong>— С какой части тела ты начинаешь мыться?</strong></blockquote><p id="2b624973-c6e1-8124-9fa3-e0e6a8a70c9a" class="">
+</p><blockquote id="2b624973-c6e1-814e-902c-c5bf194f11d0" class="block-color-teal_background"><strong>— Без чего не отправишься в путешествие?</strong></blockquote><p id="2b624973-c6e1-8163-8819-c892b3f7bfca" class="">
+</p><blockquote id="2b624973-c6e1-811d-b5c6-de73c18acd49" class="block-color-teal_background"><strong>— Какие места ты посещаешь в путешествии?</strong></blockquote><p id="2b624973-c6e1-8182-bd7a-c4f4314de752" class="">
+</p><blockquote id="2b624973-c6e1-81b6-9582-fcfb8007611e" class="block-color-teal_background"><strong>— Каким видом транспорта ты предпочитаешь путешествовать?</strong></blockquote><p id="2b624973-c6e1-81e8-8acd-cc8f421c65c5" class="">
+</p><blockquote id="2b624973-c6e1-81e4-82f8-e940b4db1e13" class="block-color-teal_background"><strong>— Если бы ты мог взять на необитаемый остров только что-то одно, что бы ты выбрал?</strong></blockquote><p id="2b624973-c6e1-81a2-ac22-fe5e1794b40f" class="">
+</p><blockquote id="2b624973-c6e1-814a-a924-cdccde2ce2c3" class="block-color-teal_background"><strong>— Поприветствуй гостей своим привлекательным голосом.</strong></blockquote><p id="2b624973-c6e1-810f-aa51-ead69b4aabcf" class="">
+</p><blockquote id="2b624973-c6e1-8138-ba7c-fd2267cc1948" class="block-color-teal_background"><strong>— К кому ты обращаешься за советом, когда что-то тревожит?</strong></blockquote><p id="2b624973-c6e1-81d1-99cc-f6083413b68d" class="">
+</p><blockquote id="2b624973-c6e1-81ce-9d94-f1a29db58ae6" class="block-color-teal_background"><strong>— Если бы ты мог поменяться с кем-то телами на один день, кем бы ты стал?</strong></blockquote><p id="2b624973-c6e1-813f-a056-c759cf2568ed" class="">
+</p><blockquote id="2b624973-c6e1-819f-8f69-e86380922298" class="block-color-teal_background"><strong>— Чем бы ты хотел заниматься, если бы поменялся с ним телами</strong></blockquote><p id="2b624973-c6e1-8120-af89-c0c563223425" class="">
+</p><blockquote id="2b624973-c6e1-81eb-aa18-de6e3a963a13" class="block-color-teal_background"><strong>— Что для тебя значат путешествия?</strong></blockquote><p id="2b624973-c6e1-815c-b5f2-c5e9823026be" class="">
+</p></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="2b624973-c6e1-81b4-88b0-d90234ebb374"><div style="width:100%"><h2 id="2b624973-c6e1-8127-a3c5-d1e49412f27f" class=""><mark class="highlight-default_background">✈︎ </mark>Лор :</h2><h3 id="2b624973-c6e1-81f5-b7b8-caec86bfafc3" class="">Общее</h3><p id="2b624973-c6e1-819b-ab5c-c0437e977bcf" class=""><em>“осава в основном везде шатается,<br/>потому что у него шило в жопе и нет никаких крепких отношений - при всей любезности и любви к миру, он очень осторожничает, когда дело близости касается. с семьей он пару лет назад поругался по серьезной причине. (я придумала, но вам пока что не скажу… типа интрига…) Осава после этого со скандалом ушел жить на улицу, первый год был ОЧЕНЬ тяжелый, он обо всем жалел, особенно скучал по такой «иллюзии» счастливой школьной жизни, по упущенным возможностям. он ярко никогда не мечтал, но тоска все равно свое брала (и до сих пор берет иногда). до ухода из дома он хорошо учился, так что, к счастью, у него и знания иностранного языка есть, и в целом он такой смышленыш. он учился в довольно элитной школе, отсюда достаточно жесткое отношение к японским традициям некоторым - ему они сильно не нравятся, и хоть он и старается их уважать, у него плохо выходит.<br/>в данный момент ему больше в<br/>кайф фантазировать о всяких европах, хотя головой он уже понял, что там, скорее всего, все тоже отстойно… «хорошо там, где нас нет» и все такое. из интересов у него конечно музыка - он слушает много, иногда играет на всяких улочках, но обычно его либо быстро сгоняют, либо он сам уходит, ничего не заработав, потому что, на самом деле, при всех его стараниях, таланта у него нет. справедливости ради, кенсуке это мало заботит, но иногда настроения бывают совсем ужасные… в такие моменты, музыка немного теряет смысл.<br/>еще он жуткий барахольщик, но, поскольку<br/>пару лет кочевал по всяким ужасным местам жительства, из любимого только мелочи остались.<br/>а так куча вещей валяются в хостелах, комнатках, лесах, парках - все такое. если захочет - сможет их вернуть.<br/>в общем, он такой типичный фанат ретро, который себя особо не любит.<br/>при всем этом он очень старается за собой следить, чтоб внешне походить на кого-то хотя бы слегка симпатичного. мир ему тупо в лицо успел тыкнуть тем, как внешность важна, когда у тебя дома нет. и образования.<br/>со школьными друзьями тоже непросто, но он о них с теплом вспоминает; короче, он такой… одинокий местами, но при этом активный интернет пользователь с тыщей блогов: иногда в крутых кафешках ест, чисто из-за того, что ему через знакомства удается  устроиться туда поработать —&gt; из-за этого пишет всякие ревью в кулинарный блог; в кулинаром блоге у него вообще образ того, кем он мечтал быть, но не смог стать.<br/>еще есть мини музыкальный блог, вот там он больше всего похож на самого себя из жизни.<br/>еще всякие миллионные блоги про мангу, аниме, книжки, поездки. и для всего своя мини «подличность».<br/>из интересного - он курит, у него не самые практичные наушники и он любит плееры, хотя музыку не только через них слушает.<br/>ему рисование тоже нравится, но с ним совсем дела плохи… правда какое-то аниме личико он нарисует скорее всего.</em></p><p id="2b624973-c6e1-80ed-a9c5-e16ff08b738b" class=""><em>как вы могли понять, он в целом ведет себя как социальная бабочка, но держит дистанцию - отсюда возможности ходить в хорошие места, на премьеры, в кафе… он особо не церемонится с другими, если считает, что они неправы.<br/>и периодически придумывает псевдонимы! вот”</em></p></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="2b624973-c6e1-8185-9746-c10af1fa4d41"><div style="width:100%"><h2 id="2b624973-c6e1-81b4-b729-f304a0353b02" class=""><mark class="highlight-default_background">✈︎ </mark>Взаимоотношения :</h2><table id="2b624973-c6e1-812c-b8ea-d14667da5e3d" class="simple-table"><tbody><tr id="2b624973-c6e1-81e6-8ddd-e09b419035d5"><td id="R:&lt;b" class="" style="width:142.328125px"></td><td id="Vs]`" class="" style="width:236.33333333333334px">Что думает <mark class="highlight-teal"><strong>Кенсуке</strong></mark><mark class="highlight-default"><strong>?</strong></mark></td><td id="ZN|^" class="" style="width:236.328125px">Что думают <mark class="highlight-teal"><strong>о Кенсуке</strong></mark>?</td></tr><tr id="2b624973-c6e1-8116-ac59-eb52290937b1"><td id="R:&lt;b" class="" style="width:142.328125px">Шиномия <mark class="highlight-purple"><strong>Наюта</strong></mark></td><td id="Vs]`" class="" style="width:236.33333333333334px"></td><td id="ZN|^" class="" style="width:236.328125px"></td></tr><tr id="2b624973-c6e1-817b-bb32-d4a713a5774d"><td id="R:&lt;b" class="" style="width:142.328125px">Асаи <mark class="highlight-red"><strong>Фума</strong></mark></td><td id="Vs]`" class="" style="width:236.33333333333334px"></td><td id="ZN|^" class="" style="width:236.328125px"></td></tr><tr id="2b624973-c6e1-8106-9281-ce77e2bfc5df"><td id="R:&lt;b" class="" style="width:142.328125px">Солари <mark class="highlight-pink"><strong>Лука</strong></mark></td><td id="Vs]`" class="" style="width:236.33333333333334px"></td><td id="ZN|^" class="" style="width:236.328125px"></td></tr><tr id="2b624973-c6e1-8125-8f8e-c0afc0d38423"><td id="R:&lt;b" class="" style="width:142.328125px">Цуруми <mark class="highlight-blue"><strong>Хинами</strong></mark></td><td id="Vs]`" class="" style="width:236.33333333333334px"></td><td id="ZN|^" class="" style="width:236.328125px"></td></tr><tr id="2b624973-c6e1-8054-b08f-d6de2b5eebb5"><td id="R:&lt;b" class="" style="width:142.328125px">Юги <mark class="highlight-yellow"><strong>Микото</strong></mark></td><td id="Vs]`" class="" style="width:236.33333333333334px"></td><td id="ZN|^" class="" style="width:236.328125px"></td></tr></tbody></table></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="2b624973-c6e1-814a-9126-cf78b110e786"><div style="width:100%"><h2 id="2b624973-c6e1-81eb-a689-c7c016f36a53" class=""><mark class="highlight-default_background">✈︎ </mark>Арты :</h2><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">+ <mark class="highlight-blue">Хинами</mark></summary><div class="indented"><figure id="2b724973-c6e1-8012-b41c-d52a01db89f7" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-26_21-55-14.jpg"><img style="width:667.984375px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-26_21-55-14.jpg"/></a></figure><figure id="2b724973-c6e1-8059-96a6-db16ddb13a8b" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-26_21-55-17.jpg"><img style="width:667.984375px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-26_21-55-17.jpg"/></a></figure></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Разное</summary><div class="indented"><figure id="2b624973-c6e1-81ea-995a-c573e3887d02" class="image"><a href="%D0%9E%D1%81%D0%B0%D0%B2%D0%B0%20%D0%9A%D0%B5%D0%BD%D1%81%D1%83%D0%BA%D0%B5/IMG_4039.jpeg"><img style="width:709.984375px" src="%D0%9E%D1%81%D0%B0%D0%B2%D0%B0%20%D0%9A%D0%B5%D0%BD%D1%81%D1%83%D0%BA%D0%B5/IMG_4039.jpeg"/></a></figure><figure id="2b624973-c6e1-80d1-829d-ddbbc56b3532" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-25_15-48-48.jpg"><img style="width:709.984375px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-25_15-48-48.jpg"/></a></figure><figure id="2b624973-c6e1-80f5-ae0a-e39dfbc9d612" class="image"><a href="%D0%90%D1%81%D0%B0%D0%B8%20%D0%A4%D1%83%D0%BC%D0%B0/photo_2025-11-25_22-07-28.jpg"><img style="width:709.984375px" src="%D0%90%D1%81%D0%B0%D0%B8%20%D0%A4%D1%83%D0%BC%D0%B0/photo_2025-11-25_22-07-28.jpg"/></a></figure><figure id="2b824973-c6e1-80ae-ae10-faaefbaa731a" class="image"><a href="%D0%9E%D1%81%D0%B0%D0%B2%D0%B0%20%D0%9A%D0%B5%D0%BD%D1%81%D1%83%D0%BA%D0%B5/photo_2025-11-27_19-49-17%201.jpg"><img style="width:709.984375px" src="%D0%9E%D1%81%D0%B0%D0%B2%D0%B0%20%D0%9A%D0%B5%D0%BD%D1%81%D1%83%D0%BA%D0%B5/photo_2025-11-27_19-49-17%201.jpg"/></a></figure><figure id="2b924973-c6e1-80b3-99bf-cbb4bc0d688a" class="image"><a href="%D0%9E%D1%81%D0%B0%D0%B2%D0%B0%20%D0%9A%D0%B5%D0%BD%D1%81%D1%83%D0%BA%D0%B5/photo_2025-11-28_17-54-49.jpg"><img style="width:709.984375px" src="%D0%9E%D1%81%D0%B0%D0%B2%D0%B0%20%D0%9A%D0%B5%D0%BD%D1%81%D1%83%D0%BA%D0%B5/photo_2025-11-28_17-54-49.jpg"/></a></figure></div></details></div></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

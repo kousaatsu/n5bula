@@ -1,0 +1,707 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Цуруми Хинами</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2b424973-c6e1-80ef-aa10-fbd096eda956" class="page sans"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://www.notion.so/icons/clover-four-leaf_gray.svg"/></div><h1 class="page-title">Цуруми Хинами</h1><p class="page-description"></p></header><div class="page-body"><hr id="2b524973-c6e1-807b-89a0-c5729dcbb48e"/><div id="2b524973-c6e1-80b6-b0cf-eb0161b0b843" class="column-list"><div id="2b524973-c6e1-8004-9e77-c4c1d24305ab" style="width:37.5%" class="column"><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="2b524973-c6e1-8006-b45a-f08f4e02f509"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/ringed-planet_gray.svg"/></div><div style="width:100%"><nav id="2b524973-c6e1-80bb-a04d-caf5056e48e6" class="table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b824973-c6e1-80f0-8a44-fe185dfefcb1"><mark class="highlight-default_background">✈︎ Цуруми Хинами</mark></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b724973-c6e1-809c-9d6c-c5eb46293e5b"><mark class="highlight-default_background">✈︎ </mark>Профиль :</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b724973-c6e1-80b2-be06-c784eaaf8148">Нарисуй автопортрет!</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b724973-c6e1-8078-a8e8-efc71e731139">Расскажи о себе!</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b724973-c6e1-80c3-8b91-cd23829b08d1">Расскажи о своих предпочтениях!</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b724973-c6e1-8033-81a2-e11aa18ca105">Вопрос-ответ</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b524973-c6e1-80e3-8220-c329cdcf3386"><mark class="highlight-default_background">✈︎ </mark>18 вопросов :</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b524973-c6e1-8098-b303-dd2ce4cb2f08"><mark class="highlight-default_background">✈︎ </mark>Лор :</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b524973-c6e1-8037-927d-ef76ff0070c5">Общее</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b524973-c6e1-807e-8b70-d745b8d6a94c">Семья</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b524973-c6e1-8089-ac42-cdb2acd211de">Негативные чувства</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b524973-c6e1-8075-b578-ce21a7b9e667"><mark class="highlight-default_background">✈︎ </mark>Взаимоотношения :</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b524973-c6e1-8043-af69-e86ddcc211df"><mark class="highlight-default_background">✈︎ </mark>Арты :</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b524973-c6e1-8058-9e9b-da7118559390">Аутфиты</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b724973-c6e1-80df-83fa-f33bf49503e3">+ <mark class="highlight-teal">Кенсуке</mark></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b524973-c6e1-804d-98ea-d71a32db7666">Разное</a></div></nav></div></figure></div><div id="2b524973-c6e1-80cb-a798-e0964584f76a" style="width:62.5%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="2b824973-c6e1-809b-9fc3-f912615c7cfe"><div style="width:100%"><h2 id="2b824973-c6e1-80f0-8a44-fe185dfefcb1" class="block-color-blue_background"><mark class="highlight-default_background">✈︎ Цуруми Хинами</mark></h2><figure id="2b824973-c6e1-8029-8495-e52f177a7e9a" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-27_19-49-20.jpg"><img style="width:625.984375px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-27_19-49-20.jpg"/></a></figure><figure id="2b524973-c6e1-80d9-9ffc-d6a3b3d88b43" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-10-30_21-47-45.jpg"><img style="width:709.96875px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-10-30_21-47-45.jpg"/></a></figure><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="2b824973-c6e1-8000-9cb4-edfdc672e9d8"><div style="width:100%"><p id="2b824973-c6e1-8067-bbe9-f9a9ca45d5a3" class=""><strong>Возраст:</strong> 16 лет</p><p id="2b824973-c6e1-8057-9549-dcc5c00547c2" class=""><strong>День рождения:</strong> 4 ноября</p><p id="2b824973-c6e1-80aa-960f-c01d4c909cd3" class=""><strong>Рост:</strong> 167 см</p><p id="2b824973-c6e1-80bf-ab32-ee8621e3b4eb" class=""><strong>Сосед(и) по комнате:</strong> Солари Лука и Осава Кенсуке</p></div></figure></div></figure></div></div><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="2b724973-c6e1-8025-8004-f6ad6a25f75c"><div style="width:100%"><h2 id="2b724973-c6e1-809c-9d6c-c5eb46293e5b" class=""><mark class="highlight-default_background">✈︎ </mark>Профиль :</h2><div id="2b724973-c6e1-80a6-a031-d4a4a4beaf9c" class="column-list"><div id="2b724973-c6e1-806e-9f73-dfb4a4b909ad" style="width:50%" class="column"><p id="2b724973-c6e1-8025-a24d-fbec0bb29843" class="">Меня зовут <em><mark class="highlight-blue">Цуруми Хинами</mark></em>.  Можете звать меня <em><mark class="highlight-blue">Цуруми</mark></em><em><mark class="highlight-default">.</mark></em></p><p id="2b724973-c6e1-80fa-831d-d9a651e80b6e" class="">Мой день рождения – <em><mark class="highlight-blue">4 ноября</mark></em>. По знаку зодиака я <em><mark class="highlight-blue">Скорпион</mark></em>. Моя группа крови – <em><mark class="highlight-blue">А</mark></em>.</p><p id="2b724973-c6e1-80f6-9026-d535ad200b70" class="">Я <em><mark class="highlight-blue">порядочный </mark></em>человек, мое хобби – <em><mark class="highlight-blue">акваскейпинг</mark></em>, а особое умение – <em><mark class="highlight-blue">судоку</mark></em>.</p><p id="2b724973-c6e1-802c-a90f-f1d66365dea6" class="">Мой девиз – <em><mark class="highlight-blue">семь раз подумай и один раз вспомни о последствиях</mark></em>! В свободное время я <em><mark class="highlight-blue">общаюсь с людьми в интернете (только благие намерения)</mark></em>.</p></div><div id="2b724973-c6e1-8019-9b7d-ece47e020e3a" style="width:50%" class="column"><h3 id="2b724973-c6e1-80b2-be06-c784eaaf8148" class="">Нарисуй автопортрет!</h3><figure id="2ba24973-c6e1-8066-93fc-fcdc4a9f5db2" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/image.png"><img style="width:240px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/image.png"/></a></figure><p id="2b724973-c6e1-80bf-a1b4-cafd8d3c5bb0" class="">Мой шарм заключается в <em><mark class="highlight-blue">улыбке</mark></em>♪</p><p id="2b724973-c6e1-801f-8aae-faf52f0dbee2" class="">
+</p></div></div><h3 id="2b724973-c6e1-8078-a8e8-efc71e731139" class="">Расскажи о себе!</h3><blockquote id="2b724973-c6e1-80c5-9bcf-f222de526cc1" class="block-color-blue_background">Место рождения</blockquote><p id="2b724973-c6e1-80cf-b220-d39da10cc1a8" class="">Хорошее место</p><blockquote id="2b724973-c6e1-8017-9e0e-fb25fcbb2b07" class="block-color-blue_background">Рост</blockquote><p id="2b724973-c6e1-80d4-90ab-e35584cd21c6" class="">167 см</p><blockquote id="2b724973-c6e1-8021-932a-ed28494532f8" class="block-color-blue_background">Вес</blockquote><p id="2b724973-c6e1-806f-b88a-d915c7099bfa" class="">Не имеет значения</p><blockquote id="2b724973-c6e1-806e-aa99-f6992fbd82dd" class="block-color-blue_background">Семья</blockquote><p id="2b724973-c6e1-80a0-b81a-dc5fc322ea5b" class="">Мать</p><blockquote id="2b724973-c6e1-8061-8df8-e7a1a1c579f0" class="block-color-blue_background">Зрение</blockquote><p id="2b724973-c6e1-8004-82bd-dbf8fd9a418b" class="">0? — 0?</p><blockquote id="2b724973-c6e1-8066-806a-c37f3218f394" class="block-color-blue_background">Преобладающая рука</blockquote><p id="2b724973-c6e1-8095-a560-d019c21078b3" class="">Левая / <span style="border-bottom:0.05em solid">Правая</span></p><h3 id="2b724973-c6e1-80c3-8b91-cd23829b08d1" class="">Расскажи о своих предпочтениях!</h3><blockquote id="2b724973-c6e1-8000-8967-de09b6f48601" class="block-color-blue_background">Любимая еда</blockquote><p id="2b724973-c6e1-8051-8753-fcb04f757533" class="">Икаяки</p><blockquote id="2b724973-c6e1-808c-8ea8-ff5b979d6496" class="block-color-blue_background">Нелюбимая еда</blockquote><p id="2b724973-c6e1-8025-9e09-f1a526b083b8" class="">Кофе</p><blockquote id="2b724973-c6e1-80a5-ae47-ec0d96a260f4" class="block-color-blue_background">Любимый цвет</blockquote><p id="2b724973-c6e1-801c-b148-e90807ce437e" class="">Зеленый</p><blockquote id="2b724973-c6e1-80b0-942e-c52e2042e14d" class="block-color-blue_background">Любимый вид спорта</blockquote><p id="2b724973-c6e1-80a9-b214-de787cecbde6" class="">Бег с препятствиями</p><blockquote id="2b724973-c6e1-809a-9d5a-f4826c012312" class="block-color-blue_background">Любимый музыкальный жанр</blockquote><p id="2b724973-c6e1-8039-b8ec-e0f494e6fb79" class="">Эмбиент</p><blockquote id="2b724973-c6e1-807a-922d-caece2b93908" class="block-color-blue_background">Любимый напиток</blockquote><p id="2b724973-c6e1-806b-bf02-fea364967b63" class="">Без кофеина</p><blockquote id="2b724973-c6e1-80b1-88bd-e0f0ab2d3e5c" class="block-color-blue_background">Любимый бренд</blockquote><p id="2b724973-c6e1-802f-82f6-f44212f40892" class="">Без понятия</p><blockquote id="2b724973-c6e1-80d3-a7fc-ecdd81c6e73c" class="block-color-blue_background">Любимое место</blockquote><p id="2b724973-c6e1-80f3-aecb-ee53944641c0" class="">Махорова</p><blockquote id="2b724973-c6e1-800e-92b2-d0dddf976e16" class="block-color-blue_background">Любимая погода</blockquote><p id="2b724973-c6e1-80ec-91d0-ed860868f5de" class="">Дождь</p><blockquote id="2b724973-c6e1-809a-8ed2-d888fb76d62f" class="block-color-blue_background">Любимое время года</blockquote><p id="2b724973-c6e1-8035-8786-df7b37ff393a" class="">Весна</p><blockquote id="2b724973-c6e1-8092-920a-d499cc225caf" class="block-color-blue_background">Любимая книга/манга</blockquote><p id="2b724973-c6e1-80b0-9de4-e3a717fb3af0" class="">“Песни насекомых”</p><blockquote id="2b724973-c6e1-80d1-b038-f2dfbea3d91e" class="block-color-blue_background">Любимый школьный предмет</blockquote><p id="2b724973-c6e1-8014-925b-cfef212ff5fd" class="">Биология</p><blockquote id="2b724973-c6e1-8005-bcff-ec8c3db35615" class="block-color-blue_background">Любимые эмодзи</blockquote><p id="2b724973-c6e1-80b6-a6b1-df5dc9e93d9a" class="">🍀 😊</p><blockquote id="2b724973-c6e1-80df-9cdd-e76c0c90c09a" class="block-color-blue_background">Любимый аромат</blockquote><p id="2b724973-c6e1-8037-9592-cf6c69bb0b97" class="">Трава</p><blockquote id="2b724973-c6e1-8066-9866-d5de1d98d1a3" class="block-color-blue_background">Любимый цветок</blockquote><p id="2b724973-c6e1-80dc-bf79-d957435e397a" class="">Ирис</p><h3 id="2b724973-c6e1-8033-81a2-e11aa18ca105" class="">Вопрос-ответ</h3><blockquote id="2b724973-c6e1-8078-b297-ef92aeace964" class="block-color-blue_background">Какой подарок обрадует?</blockquote><p id="2b724973-c6e1-8035-a969-c277383affda" class="">Права админа на вашем сервере</p><blockquote id="2b724973-c6e1-80b0-b860-d949f423f43d" class="block-color-blue_background">Кем мечтал(а) стать в детстве?</blockquote><p id="2b724973-c6e1-8008-a344-ff6ec3cb3dfc" class="">Кем-то, у кого много рук, как у Шивы (для помощи с уборкой)</p><blockquote id="2b724973-c6e1-80db-8b67-f995c4bd333c" class="block-color-blue_background">Ты выиграл(а) 300 млн в лотерею! На что потратишь..?</blockquote><p id="2b724973-c6e1-8077-92e4-d034df311cee" class=""><del>Донатные скины</del> Инвестиции</p><blockquote id="2b724973-c6e1-802d-83fe-daf7c28e04a1" class="block-color-blue_background">Каков твой идеал человека?</blockquote><p id="2b724973-c6e1-8080-ae4c-cc3be257b226" class="">Встает не раньше девяти утра</p></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="2b524973-c6e1-80b6-9394-d290f28764ea"><div style="width:100%"><h2 id="2b524973-c6e1-80e3-8220-c329cdcf3386" class=""><mark class="highlight-default_background">✈︎ </mark>18 вопросов :</h2><blockquote id="2b524973-c6e1-80d4-a509-f2df3ad826cc" class="block-color-blue_background"><strong>— Как тебя зовут?</strong></blockquote><p id="2b524973-c6e1-808b-b106-d65360a3566a" class="">Цуруми Хинами.</p><blockquote id="2b524973-c6e1-8009-aa57-e023e237da19" class="block-color-blue_background"><strong>— Сколько тебе лет?</strong></blockquote><p id="2b524973-c6e1-8055-b37a-c82b60af433c" class="">16.</p><blockquote id="2b524973-c6e1-80e2-b0a8-fd490e36432d" class="block-color-blue_background"><strong>— Твой род деятельности?</strong></blockquote><p id="2b524973-c6e1-800f-92e7-def5252d055f" class="">Помимо учебы в школе, я являюсь настоятелем местного храма.</p><blockquote id="2b524973-c6e1-80b3-bc79-d2217f3add90" class="block-color-blue_background"><strong>— Что ты делаешь в первую очередь, когда просыпаешься?</strong></blockquote><p id="2b524973-c6e1-80bc-996a-d146d67fbdcc" class="">Утренний обход дома: проверяю, всё ли на своих местах, убираюсь и кормлю рыбок.</p><blockquote id="2b524973-c6e1-80b2-9b20-da4cc117f919" class="block-color-blue_background"><strong>— Есть ли у тебя какие-нибудь привычки, связанные с едой?</strong></blockquote><p id="2b524973-c6e1-80da-ac73-d67925d6220f" class="">Предпочитаю есть палочками, если это можно считать за привычку. </p><blockquote id="2b524973-c6e1-8045-a0a1-f7354cdaee62" class="block-color-blue_background"><strong>— С чем у тебя ассоциируется вечер?</strong></blockquote><p id="2b524973-c6e1-8097-8510-d4c7da03bb61" class="">С первыми звездами. Когда все прихожане уже разошлись, службы окончены, а ты стоишь, подметаешь двор…</p><blockquote id="2b524973-c6e1-8007-83ba-ef4b45c5399c" class="block-color-blue_background"><strong>— Чем ты занимаешься перед сном?</strong></blockquote><p id="2b524973-c6e1-8073-8308-e7ca88533b98" class="">Скроллю соцсети. Ничего особенного. Если свободного времени достаточно, могу поиграть в какие-нибудь видеоигры. Немного. Для развлечения.</p><blockquote id="2b524973-c6e1-8008-b785-de5ffa6dca04" class="block-color-blue_background"><strong>— С какой части тела ты начинаешь мыться?</strong></blockquote><p id="2b524973-c6e1-80df-8328-e8eb2241e901" class="">...Спасибо за ваш вопрос. </p><blockquote id="2b524973-c6e1-80b0-a317-c685611778bd" class="block-color-blue_background"><strong>— Без чего не отправишься в путешествие?</strong></blockquote><p id="2b524973-c6e1-8047-a4e9-ec929f7e8928" class="">Без Роро я даже из дома не выйду. В современных реалиях наша жизнь очень тесно связана с подобными вещами.</p><blockquote id="2b524973-c6e1-80b4-bc90-d6b642d1bf7d" class="block-color-blue_background"><strong>— Какие места ты посещаешь в путешествии?</strong></blockquote><p id="2b524973-c6e1-8026-bc14-e2555ccba4f7" class="">Больше всего меня интересуют парки и водоемы. Если останется время, будет славно зайти в пару храмов.</p><blockquote id="2b524973-c6e1-8048-a9c6-da3ad94126f8" class="block-color-blue_background"><strong>— Каким видом транспорта ты предпочитаешь путешествовать?</strong></blockquote><p id="2b524973-c6e1-80bf-bfe5-cb3db8bbe581" class="">Мне нравится путешествовать пешком. Это ощущается как паломничество.</p><blockquote id="2b524973-c6e1-8028-9b1d-f84e8fbeb622" class="block-color-blue_background"><strong>— Если бы ты мог взять на необитаемый остров только что-то одно, что бы ты выбрал?</strong></blockquote><p id="2b524973-c6e1-8068-919a-cc880837e20b" class="">Удочку. Как говорится, дай человеку рыбу и он будет сыт один день, научи человека рыбачить и он будет сыт всю жизнь.</p><blockquote id="2b524973-c6e1-80e8-9daf-c01a4b0fe218" class="block-color-blue_background"><strong>— Поприветствуй гостей своим привлекательным голосом.</strong></blockquote><p id="2b524973-c6e1-803c-b261-fd7a1c35ef6e" class="">Полагаю, это не совсем та просьба, которую следовало бы выполнять ученику старшей школы. Спасибо за вашу инициативность и извините.</p><blockquote id="2b524973-c6e1-80f7-8e1c-cb8f0917d5c0" class="block-color-blue_background"><strong>— К кому ты обращаешься за советом, когда что-то тревожит?</strong></blockquote><p id="2b524973-c6e1-809a-ba97-f99bbce90acd" class="">В первую очередь к духовному внутри себя. Или к рыбкам. Интернету.</p><blockquote id="2b524973-c6e1-8021-8ddb-db5a4d99e9d4" class="block-color-blue_background"><strong>— Если бы ты мог поменяться с кем-то телами на один день, кем бы ты стал?</strong></blockquote><p id="2b524973-c6e1-8007-a865-f1f3842fdc54" class="">А какие есть варианты? Люди, животные... другие существа? Было бы интересно посмотреть, как рыбы видят мир.</p><blockquote id="2b524973-c6e1-80ac-81c8-ef11b49388db" class="block-color-blue_background"><strong>— Чем бы ты хотел заниматься, если бы поменялся с ним телами</strong></blockquote><p id="2b524973-c6e1-806d-93a6-c40353e44133" class="">Я спросил бы всех остальных рыбок, хорошо ли им со мной живется, всего ли достаточно и счастливы ли они.</p><blockquote id="2b524973-c6e1-8053-bb32-d4341a1499f8" class="block-color-blue_background"><strong>— Что для тебя значат путешествия?</strong></blockquote><p id="2b524973-c6e1-80fe-84bd-fede8a536c8b" class="">Возможность быть самим собой, ничем и никем не обремененным. Время замирает, ты остаешься один со своими мыслями и осознаешь, кем являешься и чего хочешь.</p></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="2b524973-c6e1-80f3-84fc-df1e83ce2fbe"><div style="width:100%"><h2 id="2b524973-c6e1-8098-b303-dd2ce4cb2f08" class=""><mark class="highlight-default_background">✈︎ </mark>Лор :</h2><h3 id="2b524973-c6e1-8037-927d-ef76ff0070c5" class="">Общее</h3><p id="2b524973-c6e1-80a8-a2ca-dcd63c798822" class=""><em>“в двух словах цуруми спокойный вежливый привык ко всем уважительно обращаться. делает вид что ему похуй на всю хуйню но на самом деле это не так и он просто копит всю агрессию в себе чтобы потом пытаться поймать дзен в вещах которые приносят ему удовольствие (аквариумы рыбы природа парки буллинг школьников) поэтому если вы нарушите его покой пока он чиллит то дизреспект гарантирован но вы об этом не узнаете”<br/>“если бы у него было расписание то это было бы подъем в 4 утра уборка уборка школа уборка аквариумов дома митап с другими н5булерами уборка буллинг в интернете сон четыре часа”<br/>”свои первые накопленные деньги он потратил на робота в виде божьей коровки который достаточно маленький чтобы его можно было спрятать в карман чтоб мама не спалила”<br/>”его мечта детства это иметь много рук потому что у них дома нет ни посудомойки ни робота-пылесоса или любых других вещей облегчающих жизнь которые уже могли быть в 2055 году и ему приходилось постоянно убираться руками”</em></p><h3 id="2b524973-c6e1-807e-8b70-d745b8d6a94c" class="">Семья</h3><p id="2b524973-c6e1-8013-9a37-d5395358e5f6" class=""><em>&quot;семья цуруми поколениями наследует храм и они все были довольно религиозными людьми и в случае его мамы эта религиозность ушла в воспитание строящееся на смирении прощании людей и всем таким + отрицание технологий потому что это не богоугодно и не традиционно + я думаю она доверчивая фанатка религиозных сходок ирл как было у наги в новелле только у него там это была около-психологическая тусовка. а доверчивая потому что она изначально не была частью этой религиозной семьи а просто вышла замуж за мужа который уже этим храмом владел и сама она на самом деле не сильно шарит во всей этой хуйне поэтому ее легко наебать...) поэтому цуруми вырос очень спокойным ребенком далеким от технологий и если в детстве ему было норм то чем старше он становился тем больше это превращалось в проблему + он столкнулся с буллингом в школе в итоге которого произошло кое-что нехорошее но нам необязательно знать что именно.<br/>владение храмом в конечном итоге должно перейти хинами и я думаю что кафка с ним сконнектился как раз из-за того что он хорошо шарит за местную культуру зелень воду молодой настоятель храма хинами никогда в жизни не согласился бы на такое потому что кафка очень прогрессивный чел но кафка пообещал оплатить долги его матери (ее скорее всего наебали мошенники) если все окупится поэтому он готов ебашить на хаму 24/7”</em></p><h3 id="2b524973-c6e1-8089-ac42-cdb2acd211de" class="">Негативные чувства</h3><p id="2b524973-c6e1-808d-b4f7-f9eb1c3cc62e" class=""><em>“у него с детства были проблемы с восприятием собственных чувств потому что его не научили здраво осмысливать негативные эмоции и приглушали их тем что он должен быть смиренным и после того как это случилось ему стало еще тяжелее держать себя в руках поэтому он постоянно вспоминает о том что случилось и напоминает себе что он обязан держать себя в руках иначе что-то такое может повториться и поэтому хинами много времени проводит в интернете где может анонимно посраться с кем-то на сто постов и выпустить негатив таким образом”</em></p></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="2b524973-c6e1-8040-83d8-f2a3d7cba5a8"><div style="width:100%"><h2 id="2b524973-c6e1-8075-b578-ce21a7b9e667" class=""><mark class="highlight-default_background">✈︎ </mark>Взаимоотношения :</h2><table id="2b524973-c6e1-8099-872c-f428191039b7" class="simple-table"><tbody><tr id="2b524973-c6e1-8050-87ae-ef822b0c8c46"><td id="R:&lt;b" class="" style="width:137.328125px"></td><td id="Vs]`" class="" style="width:236.33333333333334px">Что думает <mark class="highlight-blue"><strong>Хинами</strong></mark>?</td><td id="ZN|^" class="" style="width:236.328125px">Что думают <mark class="highlight-blue"><strong>о Хинами</strong></mark>?</td></tr><tr id="2b524973-c6e1-804d-a9df-e6e03226285f"><td id="R:&lt;b" class="" style="width:137.328125px">Шиномия <mark class="highlight-purple"><strong>Наюта</strong></mark></td><td id="Vs]`" class="" style="width:236.33333333333334px">У меня много родственников. Я не удивлюсь, если Шиномия-сан один из них, ведь у него прекрасный вкус.</td><td id="ZN|^" class="" style="width:236.328125px">Неприступный. Хотелось бы узнать его получше... Нас иногда путают, что всегда очень неловко. Мы точно никак не связаны?..</td></tr><tr id="2b524973-c6e1-8085-bc3e-ff262319db3d"><td id="R:&lt;b" class="" style="width:137.328125px">Асаи <mark class="highlight-red"><strong>Фума</strong></mark></td><td id="Vs]`" class="" style="width:236.33333333333334px">Сенпай, на которого всегда можно положиться. Но о некоторых вещах рассказывать не стоит.<br/>(Он видел меня в уязвимом положении. Если об этом кто-то узнает, ему пиздец)</td><td id="ZN|^" class="" style="width:236.328125px">Хинамими, ах, этот ребенок! Мы ведь так давно знакомы... Почему он ведет себя так, будто мы никто друг другу..? Хочу чтобы он звал меня по имени, мы ведь друзья! Но я рад, что он продолжает навещать нашу библиотеку~</td></tr><tr id="2b524973-c6e1-8079-8372-ec1c7c676ef3"><td id="R:&lt;b" class="" style="width:137.328125px">Солари <mark class="highlight-pink"><strong>Лука</strong></mark></td><td id="Vs]`" class="" style="width:236.33333333333334px">Он выглядит куда моложе своего возраста. Очень ярко.<br/>(Напоминает одного человека. Некомфортно находиться рядом)</td><td id="ZN|^" class="" style="width:236.328125px">Цуму-чан! Я очень ему завидую, на самом деле... Вот бы хоть на денек снова оказаться подростком. Хочу проводить с ним больше времени и подружиться, а то он кажется таким скрытным!</td></tr><tr id="2b624973-c6e1-8080-9ee9-e1d587c9bade"><td id="R:&lt;b" class="" style="width:137.328125px">Осава <mark class="highlight-teal"><strong>Кенсуке</strong></mark></td><td id="Vs]`" class="" style="width:236.33333333333334px"></td><td id="ZN|^" class="" style="width:236.328125px"></td></tr><tr id="2b524973-c6e1-80ad-bcac-fbd4c884cb7a"><td id="R:&lt;b" class="" style="width:137.328125px">Юги <mark class="highlight-yellow"><strong>Микото</strong></mark></td><td id="Vs]`" class="" style="width:236.33333333333334px">Наш кондуктор не без минусов, конечно. Например, она девушка.</td><td id="ZN|^" class="" style="width:236.328125px">Такой спокойный и собранный, хотя мы ровесники... Хочу быть как он. Рядом с ним нервничаю не так сильно.</td></tr></tbody></table></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="2b524973-c6e1-805a-abca-c0c734e65397"><div style="width:100%"><h2 id="2b524973-c6e1-8043-af69-e86ddcc211df" class=""><mark class="highlight-default_background">✈︎ </mark>Арты :</h2><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Аутфиты</summary><div class="indented"><figure id="2b524973-c6e1-8092-987d-e0425530c642" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-24_20-03-00.jpg"><img style="width:709.984375px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-24_20-03-00.jpg"/></a></figure><figure id="2b524973-c6e1-8028-a689-d9a2d42c2431" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-24_20-03-15.jpg"><img style="width:709.984375px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-24_20-03-15.jpg"/></a></figure></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">+ <mark class="highlight-teal">Кенсуке</mark></summary><div class="indented"><figure id="2b724973-c6e1-808e-9376-e098551a0d30" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-26_21-55-14.jpg"><img style="width:667.984375px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-26_21-55-14.jpg"/></a></figure><figure id="2b724973-c6e1-8059-b752-ea1fe3cbcabd" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-26_21-55-17.jpg"><img style="width:667.984375px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-26_21-55-17.jpg"/></a></figure></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Разное</summary><div class="indented"><figure id="2b524973-c6e1-803f-af59-e5aad7a318d6" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-24_19-53-45.jpg"><img style="width:710px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-24_19-53-45.jpg"/></a></figure><figure id="2b524973-c6e1-807e-9e40-eb01161b5690" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-24_20-02-41.jpg"><img style="width:710px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-24_20-02-41.jpg"/></a></figure><figure id="2b524973-c6e1-8072-b282-f235447dae1e" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-24_20-02-50.jpg"><img style="width:710px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-24_20-02-50.jpg"/></a></figure><figure id="2b524973-c6e1-80fd-8fae-e24304295e72" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-24_19-53-52.jpg"><img style="width:710px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-24_19-53-52.jpg"/></a></figure><figure id="2b524973-c6e1-8013-9b6b-c7b9517c44f0" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-24_19-41-16.jpg"><img style="width:710px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-24_19-41-16.jpg"/></a></figure><figure id="2b724973-c6e1-80cc-8ffd-fe5db660de63" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-25_15-48-48.jpg"><img style="width:709.984375px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-25_15-48-48.jpg"/></a></figure><figure id="2b824973-c6e1-803c-93ac-fa81b949c3f2" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-27_19-49-20%201.jpg"><img style="width:709.984375px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-27_19-49-20%201.jpg"/></a></figure><figure id="2b924973-c6e1-8056-8f12-e42791e25197" class="image"><a href="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-28_17-54-49.jpg"><img style="width:709.984375px" src="%D0%A6%D1%83%D1%80%D1%83%D0%BC%D0%B8%20%D0%A5%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8/photo_2025-11-28_17-54-49.jpg"/></a></figure><figure id="2ba24973-c6e1-80bb-8176-e20e89c0ef0f" class="image"><a href="%D0%90%D1%81%D0%B0%D0%B8%20%D0%A4%D1%83%D0%BC%D0%B0/photo_2025-11-29_14-21-23.jpg"><img style="width:709.984375px" src="%D0%90%D1%81%D0%B0%D0%B8%20%D0%A4%D1%83%D0%BC%D0%B0/photo_2025-11-29_14-21-23.jpg"/></a></figure></div></details></div></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

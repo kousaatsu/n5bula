@@ -1,0 +1,708 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Юги Микото</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2b524973-c6e1-8096-b005-f1e66b3e3060" class="page sans"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://www.notion.so/icons/bee_gray.svg"/></div><h1 class="page-title">Юги Микото</h1><p class="page-description"></p></header><div class="page-body"><hr id="2b824973-c6e1-80c2-ba2a-ff8c8ed2835d"/><div id="2b524973-c6e1-80c0-912e-fac64ae63439" class="column-list"><div id="2b524973-c6e1-808f-9009-e9e930f35a7a" style="width:37.5%" class="column"><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="2b524973-c6e1-80ad-b59e-d1e60d4ebe41"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/ringed-planet_gray.svg"/></div><div style="width:100%"><nav id="2b524973-c6e1-8093-aa2a-f592b645299a" class="table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b824973-c6e1-80f1-ae1e-c0ca81bc5b4a"><mark class="highlight-default_background">✈︎ Юги Микото</mark></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b724973-c6e1-802f-9fb7-fed2b8afea34"><mark class="highlight-default_background">✈︎ </mark>Профиль :</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b724973-c6e1-803c-910d-f644e4d0b75a">Нарисуй автопортрет!</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b724973-c6e1-8033-9561-c803b44742d2">Расскажи о себе!</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b724973-c6e1-80e3-a4c9-c0610f931788">Расскажи о своих предпочтениях!</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b724973-c6e1-80eb-928d-ef008ad87d46">Вопрос-ответ</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b524973-c6e1-80d2-a7c8-faa47efbb31a"><mark class="highlight-default_background">✈︎ </mark>18 вопросов :</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b524973-c6e1-80f4-8307-f76a4653cebd"><mark class="highlight-default_background">✈︎ </mark>Лор :</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b524973-c6e1-80c4-bf82-e19b1d273cf7">Общее</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b524973-c6e1-80fc-b69b-e962b748aa7a"><mark class="highlight-default_background">✈︎ </mark>Взаимоотношения :</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2b524973-c6e1-802e-afdf-cdb2a1ac2b4b"><mark class="highlight-default_background">✈︎ </mark>Арты :</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b524973-c6e1-8092-8fbe-fc1dafe5ef12">Аутфиты</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b524973-c6e1-80df-84be-d13881c2da83">+ <mark class="highlight-red">Фума </mark>и <mark class="highlight-pink">Лука</mark></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2b524973-c6e1-80f9-8c43-cd1d2d5b3648">Разное</a></div></nav></div></figure></div><div id="2b524973-c6e1-8041-a069-cf0a27bcf743" style="width:62.5%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="2b824973-c6e1-80b4-89c8-f4637fe1018e"><div style="width:100%"><h2 id="2b824973-c6e1-80f1-ae1e-c0ca81bc5b4a" class="block-color-yellow_background"><mark class="highlight-default_background">✈︎ Юги Микото</mark></h2><figure id="2b824973-c6e1-800c-b01b-c921edde1b71" class="image"><a href="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/photo_2025-11-27_19-49-24.jpg"><img style="width:625.984375px" src="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/photo_2025-11-27_19-49-24.jpg"/></a></figure><figure id="2ba24973-c6e1-801d-a2ab-ca909789444e" class="image"><a href="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/image.png"><img style="width:1280px" src="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/image.png"/></a></figure><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="2b824973-c6e1-80c2-869a-c5edff969a72"><div style="width:100%"><p id="2b824973-c6e1-80d3-9fb1-c3f94faa6b49" class=""><strong>Возраст:</strong> 16 лет</p><p id="2b824973-c6e1-80fb-9210-f9b3fa75e5c8" class=""><strong>День рождения:</strong> 5 мая</p><p id="2b824973-c6e1-80b6-a3de-da5f21b5af24" class=""><strong>Рост:</strong> 158 см</p><p id="2b824973-c6e1-8030-88d9-d4304dbee089" class=""><strong>Типологии:</strong> ENFP IEE 7w6 749 so/sp ELVF SLUAI sang-mel chaotic-good</p></div></figure></div></figure><p id="2b824973-c6e1-80b2-9c23-d9879dfe619a" class="">
+</p></div></div><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="2b724973-c6e1-8038-9683-ec3ff37a63c0"><div style="width:100%"><h2 id="2b724973-c6e1-802f-9fb7-fed2b8afea34" class=""><mark class="highlight-default_background">✈︎ </mark>Профиль :</h2><div id="2b724973-c6e1-802b-a22a-e7e6d7451fba" class="column-list"><div id="2b724973-c6e1-809b-84cb-e40557ec1ea7" style="width:50%" class="column"><p id="2b724973-c6e1-80b2-88aa-fbb17d14cbc1" class="">Меня зовут <em><mark class="highlight-yellow">Юги Микото</mark></em>.  Можете звать меня <em><mark class="highlight-yellow">Мико-чан</mark></em>.</p><p id="2b724973-c6e1-801a-9fbd-e30010c6441a" class="">Мой день рождения – <em><mark class="highlight-yellow">5 мая</mark></em>. По знаку зодиака я <em><mark class="highlight-yellow">Телец</mark></em>. Моя группа крови – <em><mark class="highlight-yellow">А</mark></em>.</p><p id="2b724973-c6e1-80a5-ba7a-d09696881b3b" class="">Я <em><mark class="highlight-yellow">неуклюжий </mark></em>человек, мое хобби – <em><mark class="highlight-yellow">игры</mark></em>, а особое умение – <em><mark class="highlight-yellow">бесшумная ходьба</mark></em>.</p><p id="2b724973-c6e1-80f8-98cf-cd29891b641b" class="">Мой девиз – <em><mark class="highlight-yellow">это была не я</mark></em>! В свободное время я <em><mark class="highlight-yellow">гуляю и вкусно кушаю</mark></em>.</p></div><div id="2b724973-c6e1-80b3-a649-dc1b84c2633c" style="width:50%" class="column"><h3 id="2b724973-c6e1-803c-910d-f644e4d0b75a" class="">Нарисуй автопортрет!</h3><figure id="2ba24973-c6e1-80bb-b3ec-e6671de6e366" class="image"><a href="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/image%201.png"><img style="width:240px" src="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/image%201.png"/></a></figure><p id="2b724973-c6e1-8028-a50c-e4f051014ff4" class="">Мой шарм заключается во <em><mark class="highlight-yellow">мне (милашка)</mark></em>♪</p><p id="2b724973-c6e1-80e2-9a34-c3b52cc369d3" class="">
+</p></div></div><h3 id="2b724973-c6e1-8033-9561-c803b44742d2" class="">Расскажи о себе!</h3><blockquote id="2b724973-c6e1-8068-9eb2-d87d5b3a049e" class="block-color-yellow_background">Место рождения</blockquote><p id="2b724973-c6e1-8002-8250-e689d6ed143f" class="">Мацузаки</p><blockquote id="2b724973-c6e1-80c8-98a2-d94aeb4ce8d3" class="block-color-yellow_background">Рост</blockquote><p id="2b724973-c6e1-806c-8d94-fac8f14ff6de" class="">158 см</p><blockquote id="2b724973-c6e1-80a1-b9fd-d1197200e142" class="block-color-yellow_background">Вес</blockquote><p id="2b724973-c6e1-808a-9947-db5b3dec74cd" class="">46 кг</p><blockquote id="2b724973-c6e1-8081-bcae-e91963b9df8e" class="block-color-yellow_background">Семья</blockquote><p id="2b724973-c6e1-8066-834c-c38a02d69af0" class="">Мама и папа</p><blockquote id="2b724973-c6e1-8056-ab0b-dc29256a1480" class="block-color-yellow_background">Зрение</blockquote><p id="2b724973-c6e1-80b6-afca-c25b438a5047" class="">0,5 — 0,5</p><blockquote id="2b724973-c6e1-807e-b019-da358e86778d" class="block-color-yellow_background">Преобладающая рука</blockquote><p id="2b724973-c6e1-8001-9f1e-c8952f754cb7" class="">Левая / <span style="border-bottom:0.05em solid">Правая</span></p><h3 id="2b724973-c6e1-80e3-a4c9-c0610f931788" class="">Расскажи о своих предпочтениях!</h3><blockquote id="2b724973-c6e1-8077-a9fd-ce463d5129cd" class="block-color-yellow_background">Любимая еда</blockquote><p id="2b724973-c6e1-805b-80a2-c92a0aa1f829" class="">Острое</p><blockquote id="2b724973-c6e1-805a-9067-e60d079e3d27" class="block-color-yellow_background">Нелюбимая еда</blockquote><p id="2b724973-c6e1-80b4-a51a-f22b8c3cea57" class="">Горькое</p><blockquote id="2b724973-c6e1-809c-a69d-d9a377cc0f47" class="block-color-yellow_background">Любимый цвет</blockquote><p id="2b724973-c6e1-80b7-9539-e06fb7a10690" class="">Желтый</p><blockquote id="2b724973-c6e1-80de-9cba-d645917ad59e" class="block-color-yellow_background">Любимый вид спорта</blockquote><p id="2b724973-c6e1-8084-bf2e-f3c95a7f22f3" class="">Фу</p><blockquote id="2b724973-c6e1-80c1-866a-fbc80b21caf3" class="block-color-yellow_background">Любимый музыкальный жанр</blockquote><p id="2b724973-c6e1-801e-99a6-f2404237adc3" class="">Джаз и электро</p><blockquote id="2b724973-c6e1-80ac-b990-d486b107c01a" class="block-color-yellow_background">Любимый напиток</blockquote><p id="2b724973-c6e1-80d0-9595-dc26b97b4503" class="">Апельсиновый сок</p><blockquote id="2b724973-c6e1-80d3-a3af-f746694d5bb8" class="block-color-yellow_background">Любимый бренд</blockquote><p id="2b724973-c6e1-80bf-a9c2-e27d59aeacc4" class="">То, что дешевле</p><blockquote id="2b724973-c6e1-80bd-9ecd-fa6e8752262e" class="block-color-yellow_background">Любимое место</blockquote><p id="2b724973-c6e1-80bc-9a1d-c567cea5b57a" class="">Рядом с водой</p><blockquote id="2b724973-c6e1-8031-8b49-ff2ee6c95544" class="block-color-yellow_background">Любимая погода</blockquote><p id="2b724973-c6e1-80ed-a611-fa518b4abad6" class="">Солнечная</p><blockquote id="2b724973-c6e1-8017-8259-f111dc82e7b0" class="block-color-yellow_background">Любимое время года</blockquote><p id="2b724973-c6e1-80c6-9a92-c68e1cc59ee4" class="">Лето</p><blockquote id="2b724973-c6e1-8007-8aa0-c4137475f0ac" class="block-color-yellow_background">Любимая книга/манга</blockquote><p id="2b724973-c6e1-8083-86be-f7787a2273e8" class="">Сейлор Мун</p><blockquote id="2b724973-c6e1-8085-9e8b-d8aec18089b5" class="block-color-yellow_background">Любимый школьный предмет</blockquote><p id="2b724973-c6e1-80f2-99ae-f2f8fac0aa80" class="">Физика</p><blockquote id="2b724973-c6e1-80a1-9010-c1755922a74c" class="block-color-yellow_background">Любимые эмодзи</blockquote><p id="2b724973-c6e1-8068-b17f-caf55e52e1c1" class="">🐝 :З</p><blockquote id="2b724973-c6e1-80d7-9748-fad93e413c1b" class="block-color-yellow_background">Любимый аромат</blockquote><p id="2b724973-c6e1-8046-a62f-d37c800e7150" class="">Асфальт после дождя</p><blockquote id="2b724973-c6e1-80e7-b289-e93737fd881c" class="block-color-yellow_background">Любимый цветок</blockquote><p id="2b724973-c6e1-80d1-946d-e356cd50beba" class="">Первоцвет</p><h3 id="2b724973-c6e1-80eb-928d-ef008ad87d46" class="">Вопрос-ответ</h3><blockquote id="2b724973-c6e1-80b1-8337-c4eebf2252f0" class="block-color-yellow_background">Какой подарок обрадует?</blockquote><p id="2b724973-c6e1-8066-bef7-c8b1a03b899c" class="">Вкусняшки! Или брелки</p><blockquote id="2b724973-c6e1-8071-81ac-f4d259f721c0" class="block-color-yellow_background">Кем мечтал(а) стать в детстве?</blockquote><p id="2b724973-c6e1-8041-a100-f7594b00881e" class="">Пчелкой. А потом я узнала, что они живут всего полгода</p><blockquote id="2b724973-c6e1-805a-ac99-d3d884672aeb" class="block-color-yellow_background">Ты выиграл(а) 300 млн в лотерею! На что потратишь..?</blockquote><p id="2b724973-c6e1-807a-ad60-fe3a094e56d7" class="">Куплю себе кучу плюшевых пчел</p><blockquote id="2b724973-c6e1-8003-b8ba-d01b0793e0c8" class="block-color-yellow_background">Каков твой идеал человека?</blockquote><p id="2b724973-c6e1-8081-ac0a-f1e6a7f97c48" class="">Крутой и взрослый</p></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="2b524973-c6e1-8064-bb9a-cd8223c2848d"><div style="width:100%"><h2 id="2b524973-c6e1-80d2-a7c8-faa47efbb31a" class=""><mark class="highlight-default_background">✈︎ </mark>18 вопросов :</h2><blockquote id="2b524973-c6e1-80e8-ae35-cbd4a3f95f66" class="block-color-yellow_background"><strong>— Как тебя зовут?</strong></blockquote><p id="2b524973-c6e1-802c-8383-dcfeb65a11a3" class="">Юги Микото — &quot;юу&quot; как игра, &quot;ги&quot; как шутка, &quot;мик&quot; как судьба и &quot;ото&quot; как звук. Н-но вы можете звать меня как вашей душе угодно! </p><blockquote id="2b524973-c6e1-8061-b62d-ca027c1cd865" class="block-color-yellow_background"><strong>— Сколько тебе лет?</strong></blockquote><p id="2b524973-c6e1-807b-a2ad-c5f09089abfb" class="">...17 в следующем году!! </p><blockquote id="2b524973-c6e1-8051-b2d4-d14c09da85fe" class="block-color-yellow_background"><strong>— Твой род деятельности?</strong></blockquote><p id="2b524973-c6e1-80f6-863a-c636405fcea8" class="">Я кондуктор группы N5bula в HAMA18!!! Но а вообще, я немножко интересуюсь психологией. </p><blockquote id="2b524973-c6e1-8006-90c7-edea39d1b11d" class="block-color-yellow_background"><strong>— Что ты делаешь в первую очередь, когда просыпаешься?</strong></blockquote><p id="2b524973-c6e1-809a-b003-d3e7ebdbe70c" class="">Проверяю телефон, конечно же! </p><blockquote id="2b524973-c6e1-806a-a4fb-ed0a52fa6f75" class="block-color-yellow_background"><strong>— Есть ли у тебя какие-нибудь привычки, связанные с едой?</strong></blockquote><p id="2b524973-c6e1-8099-8beb-cf89f2aea311" class="">Ууу, не знаю... Наверное то, что я постоянно добавляю острый соус к еде? Ну, только не к сладкому! </p><blockquote id="2b524973-c6e1-805d-8996-cf1fec448183" class="block-color-yellow_background"><strong>— С чем у тебя ассоциируется вечер?</strong></blockquote><p id="2b524973-c6e1-8019-bad0-df22324a3404" class="">С домашкой... Шутка, я не делаю домашку! </p><blockquote id="2b524973-c6e1-806d-a8ff-d60fdaa8065b" class="block-color-yellow_background"><strong>— Чем ты занимаешься перед сном?</strong></blockquote><p id="2b524973-c6e1-8048-a57c-e881b1636758" class="">Я люблю гулять! Мама никогда не выпускала меня из дома после того как стемнело, а теперь я могу выйти хоть в три часа ночи и никто мне ничего не скажет ♪</p><blockquote id="2b524973-c6e1-802f-8b0c-e07633991387" class="block-color-yellow_background"><strong>— С какой части тела ты начинаешь мыться?</strong></blockquote><p id="2b524973-c6e1-806d-9c23-f23bba171187" class="">Ээ, не считая руки, то волосы. Никогда не вылезаю из ванны не помыв волосы. </p><blockquote id="2b524973-c6e1-8002-9400-fde232d2816a" class="block-color-yellow_background"><strong>— Без чего не отправишься в путешествие?</strong></blockquote><p id="2b524973-c6e1-80eb-ae2e-fddcc67a0525" class="">Без навигатора! Иначе я просто потеряюсь — для кондуктора это непозволительно!!! </p><blockquote id="2b524973-c6e1-807c-add9-f019fae4f451" class="block-color-yellow_background"><strong>— Какие места ты посещаешь в путешествии?</strong></blockquote><p id="2b524973-c6e1-8046-9ffa-d6f8bb6762b2" class="">Самое главное — узнать что едят местные. Поэтому я первым делом ищу кафе и ресторанчики! Это точно не потому, что я голодна после пути.</p><blockquote id="2b524973-c6e1-808f-b29c-dffdd048ef14" class="block-color-yellow_background"><strong>— Каким видом транспорта ты предпочитаешь путешествовать?</strong></blockquote><p id="2b524973-c6e1-8002-9449-e33ff12e0cd5" class="">Что угодно, но не машины. В машинах душно, невкусно пахнет и вообще... </p><blockquote id="2b524973-c6e1-8010-8128-e5a6e85dfefe" class="block-color-yellow_background"><strong>— Если бы ты мог взять на необитаемый остров только что-то одно, что бы ты выбрал?</strong></blockquote><p id="2b524973-c6e1-807f-a8e1-cd6223abc2e4" class="">Что-то одно не получится, мне все слишком нужно... Уу, не знаю! Может, зажигалку? </p><blockquote id="2b524973-c6e1-8094-9d3b-e9706fa1da3d" class="block-color-yellow_background"><strong>— Поприветствуй гостей своим привлекательным голосом.</strong></blockquote><p id="2b524973-c6e1-80c9-9e39-f0b258cc0651" class="">Добро пожаловать в HAMA18~ Могу гарантировать вам, что я смогу вам помочь! </p><blockquote id="2b524973-c6e1-80d9-9d07-ebb3192044f9" class="block-color-yellow_background"><strong>— К кому ты обращаешься за советом, когда что-то тревожит?</strong></blockquote><p id="2b524973-c6e1-80cf-a7e8-c0f7786bfbcb" class="">...Сложный вопрос, ууу... Как-то неловко просить помощи у других, когда это я та, кто должен помогать... Наверное, к Фума-сану... Н-но у меня нет любимчиков! Просто он самый старший, и— К Наю-сану, Лулу-чану, Хина-куну и Кен-онии-чану я тоже могу обратиться! Все зависит от характера вопроса, я думаю.</p><blockquote id="2b524973-c6e1-8013-8b6d-dda56d63fdd0" class="block-color-yellow_background"><strong>— Если бы ты мог поменяться с кем-то телами на один день, кем бы ты стал?</strong></blockquote><p id="2b524973-c6e1-807f-b99a-ea91ce5f690e" class="">Хочу стать Фума-саном! Каково быть таким взрослым и высоким? В его голове наверняка очень много умных мыслей.</p><blockquote id="2b524973-c6e1-8092-a193-c234be124c2b" class="block-color-yellow_background"><strong>— Чем бы ты хотел заниматься, если бы поменялся с ним телами</strong></blockquote><p id="2b524973-c6e1-808c-a3e4-f18072de0fb5" class="">Оо, я бы просто гуляла и смотрела на всех свысока!!! Хоть раз в жизни мне не придется задирать голову, разговаривая с кем-то... </p><blockquote id="2b524973-c6e1-8060-a283-f6fd441dd2da" class="block-color-yellow_background"><strong>— Что для тебя значат путешествия?</strong></blockquote><p id="2b524973-c6e1-8074-a904-d1320b4954ff" class="">Свобода! Вы не представляете, как круто наконец-то ездить по всяким разным местам и смотреть на крутые штуки после всех этих лет взаперти!~</p></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="2b524973-c6e1-807c-b304-e9d56ea79019"><div style="width:100%"><h2 id="2b524973-c6e1-80f4-8307-f76a4653cebd" class=""><mark class="highlight-default_background">✈︎ </mark>Лор :</h2><h3 id="2b524973-c6e1-80c4-bf82-e19b1d273cf7" class="">Общее</h3><p id="2b524973-c6e1-80d6-a64f-d14ffed348f7" class=""><em>“короче из основного родители у нее развелись когда ей было семь и с восьми лет она училась дома под жесткой гиперопекой мамки выходя на улицу только за ручку с ней так что топографический кретинизм + бытовая инвалидность + инфантильность...))) потом она сбежала в эмм мейби 14 или 15 и добралась до хамы самфин самфин она кондуктор и учится в одной школе с дейз отчасти в качестве компенсации проебанного опыта отчасти потому что ее уговорили н5бульцы но по сути особую цель в обучении она не преследует....... а еще у нее бинты на ноге потому что там шрам от ожога из детства лолкек. но овералл она хорошая девочка :333 с кучей копинг механизмов основной из которых конч геймификация абсолютно всей жизни на ней строится все ее восприяти–”</em></p></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="2b524973-c6e1-802b-aca3-cf6a9d8c20e0"><div style="width:100%"><h2 id="2b524973-c6e1-80fc-b69b-e962b748aa7a" class=""><mark class="highlight-default_background">✈︎ </mark>Взаимоотношения :</h2><table id="2b524973-c6e1-809d-b22e-cbaa84da4a96" class="simple-table"><tbody><tr id="2b524973-c6e1-8086-9398-ebd58319fdb6"><td id="R:&lt;b" class="" style="width:142.328125px"></td><td id="Vs]`" class="" style="width:236.33333333333334px">Что думает <mark class="highlight-yellow"><strong>Микото</strong></mark><mark class="highlight-default"><strong>?</strong></mark></td><td id="ZN|^" class="" style="width:236.328125px">Что думают <mark class="highlight-yellow"><strong>о Микото</strong></mark>?</td></tr><tr id="2b524973-c6e1-80e7-ba19-ef825c2fd5a7"><td id="R:&lt;b" class="" style="width:142.328125px">Шиномия <mark class="highlight-purple"><strong>Наюта</strong></mark></td><td id="Vs]`" class="" style="width:236.33333333333334px">Интересно, почему он забывает события за день, но помнит все произведения Омо-сана? Того писателя ведь так зовут? Забывчивый и неуклюжий... Но я не жалуюсь! Я его понимаю.</td><td id="ZN|^" class="" style="width:236.328125px">Наша Мико-сан очень милая! Мне всегда так неловко напрягать ее работой...Я должен стать более надежным старшим, чтобы ей не приходилось теряться вместе со мной…</td></tr><tr id="2b524973-c6e1-80b6-ae04-d397aa4bfb09"><td id="R:&lt;b" class="" style="width:142.328125px">Асаи <mark class="highlight-red"><strong>Фума</strong></mark></td><td id="Vs]`" class="" style="width:236.33333333333334px">Очень взрослый и крутой, но иногда ведет себя как ребенок. Напоминает мне папу. Следит за всеми (прямо как моя мама) и вкусно готовит.</td><td id="ZN|^" class="" style="width:236.328125px">Мими! Зовет меня по имени, разве не милашка? Другим явно есть чему поучиться, хе-хе~ Говорят, я прощаю ей слишком многое, но она ведь такая малышка! Хочу и дальше с ней ладить~☆</td></tr><tr id="2b524973-c6e1-80cb-b03e-d3d8bc9861b9"><td id="R:&lt;b" class="" style="width:142.328125px">Солари <mark class="highlight-pink"><strong>Лука</strong></mark></td><td id="Vs]`" class="" style="width:236.33333333333334px">Веселый и смешной. Хочу выучить французский, но стесняюсь попросить помощи... Когда у меня проблемы с техникой, всегда сначала иду к нему.</td><td id="ZN|^" class="" style="width:236.328125px">Такая малышка... Хорошо, что она быстро нашла свой жизненный путь и мы получили такого хорошего кондуктора! Правда, без прав и всего остального…</td></tr><tr id="2b524973-c6e1-8062-a2be-e743286a59d4"><td id="R:&lt;b" class="" style="width:142.328125px">Цуруми <mark class="highlight-blue"><strong>Хинами</strong></mark></td><td id="Vs]`" class="" style="width:236.33333333333334px">Такой спокойный и собранный, хотя мы ровесники... Хочу быть как он. Рядом с ним нервничаю не так сильно.</td><td id="ZN|^" class="" style="width:236.328125px">Наш кондуктор не без минусов, конечно. Например, она девушка.</td></tr><tr id="2b624973-c6e1-80ea-a64d-f25a9ff579d0"><td id="R:&lt;b" class="" style="width:142.328125px">Осава <mark class="highlight-teal"><strong>Кенсуке</strong></mark></td><td id="Vs]`" class="" style="width:236.33333333333334px"></td><td id="ZN|^" class="" style="width:236.328125px"></td></tr></tbody></table></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="2b524973-c6e1-805c-a001-ce3cfc802904"><div style="width:100%"><h2 id="2b524973-c6e1-802e-afdf-cdb2a1ac2b4b" class=""><mark class="highlight-default_background">✈︎ </mark>Арты :</h2><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Аутфиты</summary><div class="indented"><figure id="2b524973-c6e1-809e-96ac-c5acc4509cad" class="image"><a href="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/photo_2025-11-24_23-36-33.jpg"><img style="width:710px" src="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/photo_2025-11-24_23-36-33.jpg"/></a></figure><figure id="2b524973-c6e1-80dd-b968-efdc92a7408c" class="image"><a href="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/photo_2025-11-24_23-36-33_(2).jpg"><img style="width:710px" src="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/photo_2025-11-24_23-36-33_(2).jpg"/></a></figure></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">+ <mark class="highlight-red">Фума </mark>и <mark class="highlight-pink">Лука</mark></summary><div class="indented"><figure id="2b524973-c6e1-8057-9e87-fc4db0f6c269" class="image"><a href="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/photo_2025-11-24_19-42-05.jpg"><img style="width:709.984375px" src="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/photo_2025-11-24_19-42-05.jpg"/></a></figure><figure id="2b524973-c6e1-80d1-aaa1-cdc6fc5a0f96" class="image"><a href="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/photo_2025-11-24_19-42-07.jpg"><img style="width:709.984375px" src="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/photo_2025-11-24_19-42-07.jpg"/></a></figure></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Разное</summary><div class="indented"><figure id="2b524973-c6e1-807d-b3bf-c28e7b600220" class="image"><a href="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/photo_2025-11-22_00-57-24.jpg"><img style="width:709.984375px" src="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/photo_2025-11-22_00-57-24.jpg"/></a></figure><figure id="2b824973-c6e1-8091-8889-de28e91ee686" class="image"><a href="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/photo_2025-11-27_19-49-24%201.jpg"><img style="width:709.984375px" src="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/photo_2025-11-27_19-49-24%201.jpg"/></a></figure><figure id="2ba24973-c6e1-80d1-85a3-f55150953f83" class="image"><a href="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/image%202.png"><img style="width:639.984375px" src="%D0%AE%D0%B3%D0%B8%20%D0%9C%D0%B8%D0%BA%D0%BE%D1%82%D0%BE/image%202.png"/></a></figure><figure id="2ba24973-c6e1-80ad-ac94-e426a7a80ac5" class="image"><a href="%D0%90%D1%81%D0%B0%D0%B8%20%D0%A4%D1%83%D0%BC%D0%B0/photo_2025-11-29_14-21-23.jpg"><img style="width:709.984375px" src="%D0%90%D1%81%D0%B0%D0%B8%20%D0%A4%D1%83%D0%BC%D0%B0/photo_2025-11-29_14-21-23.jpg"/></a></figure></div></details></div></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
